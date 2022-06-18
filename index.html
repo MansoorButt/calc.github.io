@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body {
+    background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+    background-attachment: fixed;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+    .calc{
+        display: flex;
+        width: 70%;
+        height: 300px;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 100px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 10px;
+        column-gap: 10px;
+        font-size: 30px;
+        color: aliceblue;
+        font-family: 'Roboto', sans-serif;
+        background-image: linear-gradient( 135deg, #E2B0FF 10%, #9F44D3 100%);
+        box-shadow: #0b0e18 1px 5px 5px;
+    }
+    input{
+        width: 150px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: rgb(17, 20, 22);
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+    }
+    select{
+        width: 5rem;
+        height: 2rem;
+        border-radius: 10px;
+        border: none;
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: rgb(17, 20, 22);
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+    }
+    
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script type="text/javascript">
+function updateOutput() {
+    //calculate
+    var form = document.getElementById("calc");
+    var out = form.elements["z"];
+    var num1 = parseInt(form.elements["x"].value);
+    var num2 = parseInt(form.elements["y"].value);
+    var operator = parseInt(form.elements["op"].value);
+    switch(operator)
+        {   
+            //add
+            case 0:
+                out.value = num1+num2;
+            break;
+            //subtract
+            case 1: 
+                out.value = num1-num2;
+            break;
+            //multiply
+            case 2:
+                out.value = num1*num2;
+            break;
+            //divide
+            case 3: 
+                out.value = (num1/num2).toFixed(1);//only one digit after decimal place
+            break;
+            default:
+            break;
+        }
+    }
+</script>
+</head>
+<body>
+    <form id="calc" oninput="updateOutput()">
+        
+        <center>
+            <div><h2>Mansoor Butt (19k-1114)</h2></div>
+        <div class="calc">
+            <div><h1>Calculator</h1></div>
+            <div>
+            <input name="x" type="number" value="0" />
+            <select name="op" onchange="updateOutput()">
+                <option value="0">+</option>
+                <option value="1">-</option>
+                <option value="2">×</option>
+                <option value="3">÷</option>
+            </select>
+            <input name="y" type="number" value="0" />
+            <div class="equals"> = </div>
+            <output name="z" for="x y">0</output>
+        </div>
+        </div>
+    </center>
+
+    </form>
+</body>
+</html>
