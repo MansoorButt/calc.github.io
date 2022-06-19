@@ -3,9 +3,11 @@
 <head>
 <style type="text/css">
 body {
-    background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+    color: #34E89E;
+    background-color: #222336;
     background-attachment: fixed;
-    font-size: 14px;
+    font-size: 12px;
+    text-shadow: #34E89E 0px 0px 30px;
     margin-top: 20px;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -14,7 +16,7 @@ body {
         display: flex;
         width: 70%;
         height: 300px;
-        border-radius: 10px;
+        border-radius: 50px;
         padding: 20px;
         margin-top: 100px;
         align-items: center;
@@ -23,16 +25,18 @@ body {
         row-gap: 10px;
         column-gap: 10px;
         font-size: 30px;
-        color: aliceblue;
+        color: #eff0f8;
         font-family: 'Roboto', sans-serif;
-        background-image: linear-gradient( 135deg, #E2B0FF 10%, #9F44D3 100%);
-        box-shadow: #0b0e18 1px 5px 5px;
+        background-image: linear-gradient( 20deg, #0F3443 10%, #34E89E 100%);
+        box-shadow: #34E89E 0px 0px 10px;
+        border: #34E89E solid 2px;
+        text-shadow: #222336 0px 0px 1px;
     }
     input{
         width: 150px;
         height: 30px;
         border-radius: 10px;
-        border: none;
+        border: 5px solid #222336;
         background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
         justify-content: center;
         align-items: center;
@@ -43,8 +47,8 @@ body {
     }
     select{
         width: 5rem;
-        height: 2rem;
-        border-radius: 10px;
+        height: 2.5rem;
+        border-radius: 100px;
         border: none;
         background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
         justify-content: center;
@@ -53,6 +57,13 @@ body {
         color: rgb(17, 20, 22);
         font-family: 'Roboto', sans-serif;
         text-align: center;
+        border: 5px solid #222336;
+    }
+    footer{
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        margin-top: 80px;
     }
     
 
@@ -112,8 +123,10 @@ function updateOutput() {
             <output name="z" for="x y">0</output>
         </div>
         </div>
+        <footer>Powered by Gumper</footer>
+        
     </center>
-
+    
     </form>
 </body>
 </html>
